@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    char filename[100];
+    FILE *file;
+
+
+    printf("Enter the name of the file: ");
+    scanf("%s", filename);
+
+
+    file = fopen(filename, "r");
+
+    if (file) {
+        printf("File exists.\n");
+        fclose(file);
+    } else {
+        printf("File does not exist.\n");
+    }
+
+    return 0;
+}
